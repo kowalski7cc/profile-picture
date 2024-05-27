@@ -18,6 +18,7 @@
 
 # End of https://www.toptal.com/developers/gitignore/api/git
 
+debian/*
 !debian/control
 !debian/changelog
 !debian/rules
