@@ -1,0 +1,12 @@
+Source: kowalski7cc-profile-picture
+Maintainer: Kowalski Dragon <kowalski7cc@users.noreply.github.com>
+Section: unknown
+Build-Depends:
+ debhelper-compat (= 13),
+
+Package: kowalski7cc-profile-picture
+Architecture: all
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Kowalski Dragon user profile picture
