@@ -9,6 +9,7 @@ DIST = dist/${NAME}.tar.xz
 _DH_OPTIONS = "--destdir=${PWD}"
 
 all:
+	@mkdir -p src/faces
 	convert -quality 100 -resize 512 src/kowalski7cc.png src/faces/kowalski7cc.jpg
 
 dist:
