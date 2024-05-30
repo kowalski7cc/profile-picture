@@ -21,7 +21,7 @@ install:
 
 rpm:
 	@mkdir -p dist
-	@rpmbuild -bb --build-in-place -D "_rpmdir ${PWD}/dist" -D "version ${VERSION}" ${BASE}.spec
+	@rpmbuild -bb --build-in-place -D "_rpmdir ${PWD}/dist" ${BASE}.spec
 
 deb: 
 	@mkdir -p dist
