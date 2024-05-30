@@ -1,5 +1,5 @@
 Name:       kowalski7cc-profile-picture
-Version:    %{version}
+Version:    2.1.0
 Release:    1
 Summary:    Kowalski Dragon user profile picture
 License:    CC-BY-SA-4.0
@@ -16,7 +16,9 @@ Kowalski Dragon user profile picture
 %make_install
 
 %files
-/usr/share/pixmaps/faces/kowalski-dragon.png
+%license COPYING Attribution
+%dir %{_datadir}/pixmaps/faces
+%{_datadir}/pixmaps/faces/kowalski-dragon.png
 
 %changelog
 %autochangelog

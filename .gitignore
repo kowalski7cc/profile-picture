@@ -18,6 +18,8 @@
 
 # End of https://www.toptal.com/developers/gitignore/api/git
 
+src/faces/*
+
 debian/
 !debian/control
 !debian/changelog

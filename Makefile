@@ -1,13 +1,15 @@
-VERSION := 2.0.0
 BASE = kowalski7cc-profile-picture
 NAME = ${BASE}-${VERSION}
 
-TAR = tar --exclude=.git --exclude=.gitkeep --exclude=dist --exclude=*.tar.xz -hcvzf
+TAR = tar --exclude=.git --exclude=.gitkeep --exclude=dist --exclude=debian/.debhelper --exclude=debian/debhelper-build-stamp --exclude=debian/kowalski7cc-profile-picture.substvars --exclude=debian/files --exclude=debian/kowalski7cc-profile-picture --exclude=*.tar.xz --exclude=src/faces -hcvzf
 DIST = dist/${NAME}.tar.xz
 
 
 .EXPORT_ALL_VARIABLES:
 _DH_OPTIONS = "--destdir=${PWD}"
+
+all:
+	convert -quality 100 -resize 512 src/kowalski7cc.png src/faces/kowalski7cc.jpg
 
 dist:
 	@mkdir -p dist
@@ -15,7 +17,7 @@ dist:
 
 install:
 	@mkdir -p ${DESTDIR}/usr/share/pixmaps/faces/
-	@install -m 644 -t ${DESTDIR}/usr/share/pixmaps/faces/ src/faces/*.png
+	@install -m 644 -t ${DESTDIR}/usr/share/pixmaps/faces/ src/faces/*.jpg
 
 rpm:
 	@mkdir -p dist
