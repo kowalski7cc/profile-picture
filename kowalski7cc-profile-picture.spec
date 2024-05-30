@@ -12,6 +12,9 @@ Kowalski Dragon user profile picture
 %prep
 %setup -q -c -n %{name}-%{version}
 
+%build
+%make_build
+
 %install
 %make_install
 
