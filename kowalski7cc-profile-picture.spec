@@ -21,7 +21,7 @@ Kowalski Dragon user profile picture
 %files
 %license COPYING Attribution
 %dir %{_datadir}/pixmaps/faces
-%{_datadir}/pixmaps/faces/kowalski-dragon.png
+%{_datadir}/pixmaps/faces/kowalski7cc.jpg
 
 %changelog
 %autochangelog

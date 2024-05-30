@@ -30,3 +30,5 @@ deb:
 
 clean:
 	@rm -rf dist
+
+.PHONY: all build install dist clean rpm
