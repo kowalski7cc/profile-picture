@@ -2,7 +2,7 @@ BASE = kowalski7cc-profile-picture
 NAME = ${BASE}-${VERSION}
 VERSION = 2.2.0-1
 TAR = tar --exclude-vcs --exclude-vcs-ignores --exclude-backups -hcvzf
-DIST = dist/${NAME}-${VERSION}.tar.xz
+DIST = dist/${NAME}.tar.xz
 
 
 .EXPORT_ALL_VARIABLES:
