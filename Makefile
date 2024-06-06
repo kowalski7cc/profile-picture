@@ -1,8 +1,8 @@
 BASE = kowalski7cc-profile-picture
 NAME = ${BASE}-${VERSION}
-
-TAR = tar --exclude=.git --exclude=.gitkeep --exclude=dist --exclude=debian/.debhelper --exclude=debian/debhelper-build-stamp --exclude=debian/kowalski7cc-profile-picture.substvars --exclude=debian/files --exclude=debian/kowalski7cc-profile-picture --exclude=*.tar.xz --exclude=src/faces -hcvzf
-DIST = dist/${NAME}.tar.xz
+VERSION = 2.2.0-1
+TAR = tar --exclude-vcs --exclude-vcs-ignores --exclude-backups -hcvzf
+DIST = dist/${NAME}-${VERSION}.tar.xz
 
 
 .EXPORT_ALL_VARIABLES:
@@ -14,11 +14,16 @@ all:
 
 dist:
 	@mkdir -p dist
-	@${TAR} ${DIST} .
+	@${TAR} ${DIST} . debian/control
 
 install:
+	#~ GNOME
 	@mkdir -p ${DESTDIR}/usr/share/pixmaps/faces/
-	@install -m 644 -t ${DESTDIR}/usr/share/pixmaps/faces/ src/faces/*.jpg
+	@install -m 644 -t ${DESTDIR}/usr/share/pixmaps/faces/ src/faces/kowalski7cc.jpg
+
+	#~ KDE
+	@mkdir -p ${DESTDIR}/usr/share/plasma/avatars/
+	@install -m 644 -t ${DESTDIR}/usr/share/plasma/avatars/ src/faces/kowalski7cc.jpg
 
 rpm:
 	@mkdir -p dist

@@ -20,9 +20,9 @@
 
 src/faces/*
 
-debian/
+debian/*
 !debian/control
 !debian/changelog
 !debian/rules
 
-dist
+dist/

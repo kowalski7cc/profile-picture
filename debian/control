@@ -2,6 +2,8 @@ Source: kowalski7cc-profile-picture
 Maintainer: Kowalski Dragon <kowalski7cc@users.noreply.github.com>
 Section: unknown
 Priority: optional
+Rules-Requires-Root: no
+Standards-Version: 4.6.2
 Build-Depends:
  debhelper-compat (= 13),
  imagemagick,
