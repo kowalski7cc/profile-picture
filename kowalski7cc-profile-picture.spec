@@ -2,9 +2,11 @@ Name:       kowalski7cc-profile-picture
 Version:    2.2.0
 Release:    1
 Summary:    Kowalski Dragon user profile picture
+
 License:    CC-BY-SA-4.0
 BuildArch:  noarch
 Source0:    kowalski7cc-profile-picture.tar.xz
+BuildRequires:  ImageMagick
 
 %description
 Kowalski Dragon user profile picture
