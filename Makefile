@@ -31,7 +31,7 @@ rpm:
 
 deb: 
 	@mkdir -p dist
-	@dpkg-buildpackage -us -uc -b
+	@dpkg-buildpackage -A
 
 clean:
 	@rm -rf dist
